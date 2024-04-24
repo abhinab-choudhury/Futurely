@@ -1,0 +1,22 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "\"Futurely Backend\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abhinab-choudhury/Futurely.git"
+  },
+  "keywords": [
+    "Future-Predictor"
+  ],
+  "author": "Abhinab-Choudhury, Arkadeep Karmakar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abhinab-choudhury/Futurely/issues"
+  },
+  "homepage": "https://github.com/abhinab-choudhury/Futurely#readme"
+}
