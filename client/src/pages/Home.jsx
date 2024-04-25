@@ -1,6 +1,8 @@
 
 import React from 'react'
 import Image from './../assets/Image.png'
+import Instagram from './../assets/instagram.png'
+import Linkedin from './../assets/linkedin.png'
 import Navbar from '../components/Navbar'
 
 
@@ -54,9 +56,21 @@ function Home() {
             </div>
           </div> */}
         </section>
-        <section className='w-fit mt-10'>
-          <a className='mx-4'>Linkedin</a>
-          <a>Instagram</a>
+        <section className='mt-10 flex justify-between border-t-4 bg-gray-100 w-100'>
+          <div className='flex'>
+            <a className='m-4' href='/'>
+              <img width="32" height="32" src={Linkedin} alt="linkedin" />
+            </a>
+            <a className='m-4'>
+              <img width="32" height="32" src={Instagram} alt="instagram-new" />
+            </a>
+          </div>
+          <div className='font-extralight text-[0.6rem] w-[40%] mt-auto mb-auto'>
+            <div>
+              Copyright © 2024 Futurely. All Rights Reserved
+            </div>
+            <div>Icons by <a target="_blank" href="https://icons8.com">Icons8</a></div>
+          </div>
         </section>
       </main>
     </>
