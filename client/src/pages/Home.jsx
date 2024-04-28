@@ -1,33 +1,34 @@
 
 import React from 'react'
 import Image from './../assets/Image.png'
-import Instagram from './../assets/instagram.png'
-import Linkedin from './../assets/linkedin.png'
 import Navbar from '../components/Navbar'
+import Footer from '../components/Footer'
+import { Link } from 'react-router-dom'
 
 
 function Home() {
   return (
     <>
-      <main className='w-[100vw] h-[100vh]'>
+      <main>
         <section>
           <Navbar />
         </section>
         <section className='mt-20'>
-          <div className='mobile:flex-col mobile:h-fit mobile:pb-8 flex ml-auto mb-auto mt-auto mr-auto rounded-lg border-none w-[80%] mobile:bg-gradient-to-tl mobile:from-purple-900 mobile:via-pink-400 mobile:to-fuchsia-300 shadow'>
-            <img src={Image} className='mobile:flex mobile:mt-8 mobile:ml-auto mobile:mr-auto mobile:w-[200px] mobile:h-[200px]' alt='Futurely Hero Image' />
-            <img />
+          <div className='laptop:flex-row laptop:max-w-[80vw] laptop:mt-auto laptop:mb-auto mobile:flex-col mobile:h-fit mobile:pb-8 flex ml-auto mb-auto mt-auto mr-auto rounded-lg border-none w-[80%] mobile:bg-gradient-to-tl mobile:from-purple-900 mobile:via-pink-400 mobile:to-fuchsia-300 shadow'>
+            <img src={Image} className='laptop:flex laptop:ml-[15%] laptop:w-[340px] laptop:h-[340px] mobile:flex mobile:mt-8 mobile:ml-auto mobile:mr-auto mobile:w-[200px] mobile:h-[200px]' alt='Futurely Hero Image' />
             <div className='w-[70%] flex flex-col ml-auto mr-auto mt-5 mb-auto'>
-              <div className='w-fit text-white font-["Inter"] font-extrabold'>
-                Your
-                <span className="mx-1 font-extrabold gradient text-xl italic font-['Antonio'] text-purple-950">playful</span>
-                guide to what's next.
+              <div className='laptop:top-[24%] laptop:right-[25%] laptop:absolute'>
+                <div className='laptop:text-3xl my-5 mobile:text-sm  w-fit text-white font-["Inter"] font-extrabold'>
+                  Your
+                  <span className="laptop:text-5xl mx-1 font-extrabold moblie:text-xl gradient italic font-['Antonio'] text-purple-950">playful</span>
+                  guide to <br /> what's next.
+                </div>
+                <Link to='/features' className='laptop:h-[80px] laptop:w-[180px] laptop:text-2xl mobile:h-[50px] w-[120px] bg-purple-700 font-bold hover:text-purple-700 hover:bg-white  text-white px-2 py-1 rounded-[10px] leading-none'>Get Started</Link>
               </div>
-              <button className='h-[30px] mt-2 w-[100px] text-sm bg-purple-700 font-bold hover:text-purple-700 hover:bg-white  text-white px-2 py-1 rounded-[10px] leading-none'>Get Started</button>
             </div>
           </div>
           <div className='mobile:flex-col mobile:h-fit flex ml-auto mb-auto mt-auto mr-auto rounded-lg border-none w-[80%]'>
-            <div className='mobile:font-sm mobile:flex-col mobile:rounded-md mobile:border-2 border-black shadow font-mono mobile:p-2 mobile:my-3'>
+            <div className='laptop:p-10 mobile:font-sm mobile:flex-col mobile:rounded-md mobile:border-2 border-black shadow font-mono mobile:p-2 mobile:my-3'>
               <div className='my-2'>
                 <span className='font-extrabold'>Daily Fortune:</span>
                 Discover what the stars have aligned for you today. Will it be a day of triumphs or a time for introspection? Our daily fortune readings will provide you with a personalized message to guide your decisions and elevate your mood.
@@ -42,35 +43,10 @@ function Home() {
               </div>
             </div>
           </div>
-
-          {/* 
-          <div className=' laptop:h-[70vh] mobile:h-[65vh] flex mr-auto ml-auto relative rounded-lg border-none w-[80%] mt-20 bg-gradient-to-l from-purple-900 via-pink-400 to-fuchsia-300 shadow'>
-            <img src={Image} className='mobile:w-[140px] mobile:h-[140px] mobile:absolute mobile:-left-4  mobile:-bottom-4' alt='Futurely Hero Image' />
-            <div className='flex flex-col w-36 gap-3 relative top-[30%] bottom-[30%] -right-2/4'>
-              <div className='w-fit text-white font-["Inter"] font-extrabold'>
-                Your
-                <span className="font-extrabold gradient text-xl italic font-['Antonio'] text-purple-950">playful</span>
-                guide to what's next.
-              </div>
-              <button className='h-[30px] w-[100px] top-[40%] bottom-[30%] -right-2/4 text-sm bg-purple-700 font-bold hover:text-purple-700 hover:bg-white  text-white px-2 py-1 rounded-[10px] leading-none'>Get Started</button>
-            </div>
-          </div> */}
         </section>
-        <section className='mt-10 flex justify-between border-t-4 bg-gray-100 w-100'>
-          <div className='flex'>
-            <a className='m-4' href='/'>
-              <img width="32" height="32" src={Linkedin} alt="linkedin" />
-            </a>
-            <a className='m-4'>
-              <img width="32" height="32" src={Instagram} alt="instagram-new" />
-            </a>
-          </div>
-          <div className='font-extralight text-[0.6rem] w-[40%] mt-auto mb-auto'>
-            <div>
-              Copyright © 2024 Futurely. All Rights Reserved
-            </div>
-            <div>Icons by <a target="_blank" href="https://icons8.com">Icons8</a></div>
-          </div>
+
+        <section>
+          <Footer />
         </section>
       </main>
     </>
