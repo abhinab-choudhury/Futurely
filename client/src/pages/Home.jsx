@@ -23,7 +23,7 @@ function Home() {
                   <span className="laptop:text-5xl mx-1 font-extrabold moblie:text-xl gradient italic font-['Antonio'] text-purple-950">playful</span>
                   guide to <br /> what's next.
                 </div>
-                <Link to='/features' className='laptop:h-[80px] laptop:w-[180px] laptop:text-2xl mobile:h-[50px] w-[120px] bg-purple-700 font-bold hover:text-purple-700 hover:bg-white  text-white px-2 py-1 rounded-[10px] leading-none'>Get Started</Link>
+                <Link to='/features' className='laptop:h-[80px] laptop:w-[180px] laptop:text-2xl mobile:h-[50px] w-[120px] bg-purple-700 font-bold hover:text-purple-700 hover:bg-white  text-white px-6 py-3 rounded-[10px] leading-none'>Get Started</Link>
               </div>
             </div>
           </div>
