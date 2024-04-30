@@ -2,7 +2,7 @@ import moment from 'moment'
 
 function MarriageType() {
   const name = document.querySelector(".name").value
-  const dob = moment(document.querySelector(".dob").value).format("DD-MM-YYYY").split('-').join("")
+  let dob = moment(document.querySelector(".dob").value).format("DD-MM-YYYY").replace(/\//g, '-').split('-').join("")
 
   let sum = 0;
   let sum2 = 0;
@@ -10,6 +10,7 @@ function MarriageType() {
   let count = 0;
 
   // Extracting day from the date of birth
+  console.log(dob)
   let str = dob.substring(0, 2);
   let mulyank = parseInt(str, 10);
 
