@@ -1,3 +1,4 @@
+
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Home from './pages/Home';
 import Features from './pages/Features'
@@ -7,6 +8,7 @@ import SunSign from './pages/SunSign';
 import SunsignHarmonyPage from './pages/SunsignHarmonyPage';
 import DailyHoroscopes from './pages/DailyHoroscopes';
 
+import { SpeedInsights } from '@vercel/speed-insights/react';
 
 
 function App() {
@@ -24,6 +26,7 @@ function App() {
           <Route exact path="*" element={<ErrorPage />} />
         </Routes>
       </BrowserRouter>
+      <SpeedInsights />
     </>
   );
 }
