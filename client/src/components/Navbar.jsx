@@ -10,7 +10,7 @@ function Navbar() {
       </a>
       <ul className="flex justify-between">
         <li>
-          <Link to="/features" className=" font-['Antonio'] mx-10">FEATURES</Link>
+          <Link to="/features" className=" font-['Antonio'] mx-5">FEATURES</Link>
         </li>
         <li>
           <Link to="/features/dailyhoroscopes" className="font-['Antonio']">DAILY HOROSCOPE</Link>

@@ -38,7 +38,7 @@ function SunsignHarmonyPage() {
         <section>
           <Navbar />
         </section>
-        <section>
+        <section className='flex flex-col min-h-screen'>
           <div className='my-20 border-4 rounded-[30px] p-10 mobile:w-[90vw] laptop:w-[40vw] flex flex-col ml-auto mr-auto font-["Inter"]'>
 
             <div className='laptop:flex laptop:gap-10 tablet:gap-10'>
@@ -92,7 +92,7 @@ function SunsignHarmonyPage() {
             {loading ? <BtnSpinner /> : <Result text={result} />}
           </div>
         </section>
-        <section className='mobile:relative tablet:absolute laptop:static bottom-0 w-[100%]'>
+        <section className='w-[100%]'>
           <Footer />
         </section>
       </main>

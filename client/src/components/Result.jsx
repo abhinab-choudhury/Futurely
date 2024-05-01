@@ -3,11 +3,11 @@ import React from 'react'
 function Result({ text, heading = "" }) {
   return (
     <div>
-      <div className='underline font-extralight' style={{ fontFamily: 'cursive' }}>{heading}</div>
-      <div className='font-extrabold my-4 text-xl' style={{ fontFamily: 'cursive' }}>
+      <div className='underline font-bold'>{heading}</div>
+      <div className='font-serif font-thin my-4 text-xl'>
         {text}
       </div>
-    </div>
+    </div >
   )
 }
 

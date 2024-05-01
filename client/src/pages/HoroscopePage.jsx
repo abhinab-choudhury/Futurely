@@ -2,23 +2,32 @@ import React, { useState } from 'react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import Horoscope from '../utils/Horoscope'
-import Result from '../components/Result'
 import BtnSpinner from '../components/BtnSpinner'
+import ResultList from '../components/ResultList'
 
-function SunSign() {
-  let [result, setResult] = useState("")
-  let [subHeading, setSubHeading] = useState("")
-  let [loading, setLoading] = useState(false)
+function HoroscopePage() {
+
+  let [career, setCareer] = useState("")
+  let [business, setBusiness] = useState("")
+  let [education, setEducation] = useState("")
+  let [relationships, setRelationships] = useState("")
+  let [health, setHealth] = useState("")
+  let [luckyNumbers, setLuckyNumbers] = useState("")
+  let [luckyColor, setLuckyColor] = useState("")
+  let [luckyDays, setLuckyDays] = useState("")
+
+  let [loading, setLoading] = useState("0")
+  let [display, setDisplay] = useState(false)
 
   let APIHandler = (event) => {
     event.preventDefault()
     try {
-      setLoading(true)
+      setLoading("1")
       setTimeout(() => {
-        setLoading(false)
+        setLoading("0")
+        setDisplay(true)
       }, 2000)
-      Horoscope(setResult)
-      setSubHeading("Horoscope Year - 2024")
+      Horoscope(setCareer, setBusiness, setEducation, setRelationships, setHealth, setLuckyNumbers, setLuckyColor, setLuckyDays)
     } catch (error) {
       console.log(error)
     }
@@ -28,11 +37,11 @@ function SunSign() {
       <section>
         <Navbar />
       </section>
-      <section>
+      <section className='flex flex-col min-h-screen'>
         <div className='my-20 border-4 rounded-[30px] p-10 mobile:w-[90vw] laptop:w-[40vw] flex flex-col ml-auto mr-auto font-["Inter"]'>
 
           <div className='laptop:flex laptop:gap-10 tablet:gap-10'>
-            <h1 className='text-3xl font-extrabold'>Today's Horoscope</h1>
+            <h1 className='text-3xl font-extrabold'>Horoscope</h1>
             <form className='flex flex-col my-2 font-["Roboto Condensed"] w-[100%]'>
               <div>
                 <label htmlFor="sunsign" className="block mb-2 text-sm font-medium text-gray-900">Choose your Sunsign:</label>
@@ -54,15 +63,15 @@ function SunSign() {
             </form>
           </div>
           <div className='flex mobile:flex-col mobile:justify-center mobile:text-center mt-5 font-extrabold mobile:text-2xl'>
-            {loading ? <BtnSpinner /> : <Result text={result} heading={subHeading} />}
+            {loading === "1" ? <BtnSpinner /> : display === true ? <ResultList career={career} business={business} education={education} relationships={relationships} health={health} luckyNumbers={luckyNumbers} luckyColor={luckyColor} luckyDays={luckyDays} /> : <span></span>}
           </div>
         </div>
       </section>
-      <section className='mobile:relative tablet:absolute laptop:relative laptop:top-[100%] bottom-0 w-[100%]'>
+      <section className='w-[100%]'>
         <Footer />
       </section>
     </div>
   )
 }
 
-export default SunSign
+export default HoroscopePage
