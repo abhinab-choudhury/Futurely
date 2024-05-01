@@ -10,7 +10,7 @@ function Footer() {
           Developed by:
           <div className='flex laptop:flex-row tablet:flex-row mobile:block'>
             <a href='https://www.instagram.com/abhinab_choudhury_/'>Abhinab Choudhury,</a>
-            <a href='https://www.instagram.com/arkaaa.18/'>Arkadeep Karmakur</a>
+            <a href='https://www.instagram.com/arkaaa.18/'>Arkadeep Karmakar</a>
           </div>
         </div>
         <div className='font-extralight text-[0.6rem] mt-auto mb-auto mx-5'>

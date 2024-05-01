@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import Result from '../components/Result'
@@ -14,6 +14,7 @@ function SunsignHarmonyPage() {
 
   const SunsignHarmonyHandler = (event) => {
     event.preventDefault()
+    setLoading(true)
     if (document.getElementById('your_name').value.toLowerCase() === "") {
       setYourNameError(true)
     }
@@ -21,9 +22,13 @@ function SunsignHarmonyPage() {
       setPartnerNameError(true)
     }
     if ((document.getElementById('your_name').value.toLowerCase() !== "") && (document.getElementById('partners_name').value.toLowerCase() !== "")) {
+      setLoading(true)
+      setTimeout(() => {
+        setLoading(false);
+      }, 2000);
       setPartnerNameError(false)
       setYourNameError(false)
-      SunsignCompartbality(setResult, setLoading)
+      SunsignCompartbality(setResult)
     }
   }
 
@@ -87,7 +92,7 @@ function SunsignHarmonyPage() {
             {loading ? <BtnSpinner /> : <Result text={result} />}
           </div>
         </section>
-        <section>
+        <section className='mobile:relative tablet:absolute laptop:static bottom-0 w-[100%]'>
           <Footer />
         </section>
       </main>
