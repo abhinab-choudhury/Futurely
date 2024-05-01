@@ -7,7 +7,7 @@ function Result({ text, heading = "" }) {
       <div className='font-serif font-thin my-4 text-xl'>
         {text}
       </div>
-    </div >
+    </div>
   )
 }
 
