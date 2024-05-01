@@ -2,7 +2,7 @@
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "/ErrorPage.jsx",
+      "dest": "/ErrorPage.html",
       "statusCode": 404
     }
   ]
