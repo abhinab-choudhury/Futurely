@@ -33,11 +33,11 @@ function MarriageCallPage() {
 
           <div className='laptop:flex laptop:gap-10 tablet:gap-10'>
             <h1 className='text-3xl font-extrabold'>Marriage Call</h1>
-            <form className='flex flex-col my-2 font-["Roboto Condensed"]'>
+            <form className='flex flex-col my-2 font-["Roboto Condensed"] w-[100%]'>
               <div>
-                <label htmlFor='name' className='text-xl laptop:font-2xl tablet:text-2xl mobile:text-sm font-semibold'>Name:</label>
+                <label htmlFor='name' className='text-xl laptop:font-2xl tablet:text-2xl mobile:text-sm font-semibold'>Name:<span className='text-red-700'>*</span></label>
                 <input className='name mobile:p-1 laptop:p-2 desktop:p-2 tablet:p-2 mobile:w-[100%] laptop:font-xl tablet:text-xl mobile:mb-2 mobile:text-sm border-2 rounded-md' placeholder='Name' type='text' id='name' />
-                <label htmlFor='dob' className='text-xl laptop:font-2xl tablet:text-2xl mobile:text-sm font-semibold'>Date of Birth</label>
+                <label htmlFor='dob' className='text-xl laptop:font-2xl tablet:text-2xl mobile:text-sm font-semibold'>Date of Birth:<span className='text-red-700'>*</span></label>
                 <input className='dob p-1 laptop:p-2 desktop:p-2 mobile:w-[100%] border-2 rounded-md' type='date' id='dob' />
               </div>
               <div>
