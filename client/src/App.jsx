@@ -23,7 +23,7 @@ function App() {
           <Route exact path="/features/sunsign" element={<SunSign />} />
           <Route exact path="/features/sunshinharmony" element={<SunsignHarmonyPage />} />
           <Route exact path="/features/dailyhoroscopes" element={<DailyHoroscopes />} />
-          <Route exact path="*" element={<ErrorPage />} />
+          <Route path='*' element={<ErrorPage />} />
         </Routes>
       </BrowserRouter>
       <SpeedInsights />
