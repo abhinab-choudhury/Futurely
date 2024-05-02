@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "description": "\"Futurely Backend\"",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon --env-file=.env index.js",
     "lint": "npx eslint ./models ./controllers ./routes",
     "lint:fix": "npm run lint -- --fix",
     "prettier": "npx prettier src test --check",
@@ -28,7 +30,10 @@
   },
   "homepage": "https://github.com/abhinab-choudhury/Futurely#readme",
   "dependencies": {
-    "express": "^4.19.2"
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "mongoose": "^8.3.3",
+    "nodemon": "^3.1.0"
   },
   "devDependencies": {
     "eslint": "^8.57.0",
