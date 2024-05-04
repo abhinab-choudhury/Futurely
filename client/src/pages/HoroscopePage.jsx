@@ -16,15 +16,15 @@ function HoroscopePage() {
   let [luckyColor, setLuckyColor] = useState("")
   let [luckyDays, setLuckyDays] = useState("")
 
-  let [loading, setLoading] = useState("0")
+  let [loading, setLoading] = useState(false)
   let [display, setDisplay] = useState(false)
 
   let APIHandler = (event) => {
     event.preventDefault()
     try {
-      setLoading("1")
+      setLoading(true)
       setTimeout(() => {
-        setLoading("0")
+        setLoading(false)
         setDisplay(true)
       }, 2000)
       Horoscope(setCareer, setBusiness, setEducation, setRelationships, setHealth, setLuckyNumbers, setLuckyColor, setLuckyDays)
@@ -47,23 +47,24 @@ function HoroscopePage() {
                 <label htmlFor="sunsign" className="block mb-2 text-sm font-medium text-gray-900">Choose your Sunsign:</label>
                 <select id="sunsign" className="bg-gray-50 border border-gray-300 text-gray-900 mb-6 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
                   <option defaultValue value="Aries">Aries</option>
-                  <option value="Taurus">Taurus</option>
-                  <option value="Gemini">Gemini</option>
-                  <option value="Cancer">Cancer</option>
-                  <option value="Leo">Leo</option>
-                  <option value="Virgo">Virgo</option>
-                  <option value="Libra">Libra</option>
-                  <option value="Sagittarius">Sagittarius</option>
-                  <option value="Capricorn">Capricorn</option>
-                  <option value="Aquarius">Aquarius</option>
-                  <option value="Pisces">Pisces</option>
+                  <option value="taurus">Taurus</option>
+                  <option value="gemini">Gemini</option>
+                  <option value="cancer">Cancer</option>
+                  <option value="leo">Leo</option>
+                  <option value="virgo">Virgo</option>
+                  <option value="scorpio">Scorpio</option>
+                  <option value="libra">Libra</option>
+                  <option value="sagittarius">Sagittarius</option>
+                  <option value="capricorn">Capricorn</option>
+                  <option value="aquarius">Aquarius</option>
+                  <option value="pisces">Pisces</option>
                 </select>
               </div>
               <button type='submit' className='text-white my-2 w-fit bg-gradient-to-r from-purple-500 to-pink-500 hover:bg-gradient-to-l focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2' onClick={APIHandler}>Find Out</button>
             </form>
           </div>
           <div className='flex mobile:flex-col mobile:justify-center mobile:text-center mt-5 font-extrabold mobile:text-2xl'>
-            {loading === "1" ? <BtnSpinner /> : display === true ? <ResultList career={career} business={business} education={education} relationships={relationships} health={health} luckyNumbers={luckyNumbers} luckyColor={luckyColor} luckyDays={luckyDays} /> : <span></span>}
+            {loading ? <BtnSpinner /> : display === true ? <ResultList career={career} business={business} education={education} relationships={relationships} health={health} luckyNumbers={luckyNumbers} luckyColor={luckyColor} luckyDays={luckyDays} /> : <span></span>}
           </div>
         </div>
       </section>

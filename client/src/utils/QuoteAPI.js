@@ -2,7 +2,7 @@
 export default async function QuoteAPI(setQuoteText, setLoading, setResult) {
   const url = import.meta.env.VITE_QUOTE_API_URI
   const options = {
-    method: 'GET',
+    `http://sandipbgt.com/theastrologer/api/horoscope/${sunsign}/today/`
     headers: {
       'X-RapidAPI-Key': import.meta.env.VITE_QUOTE_API_KEY,
       'X-RapidAPI-Host': 'love-quote.p.rapidapi.com'

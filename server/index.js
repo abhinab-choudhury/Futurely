@@ -1,6 +1,7 @@
-import express from 'express'
+import express, { urlencoded } from 'express'
 import cors from 'cors'
 import { DB } from './DB.js'
+import { createUser } from './routes/createUser.js'
 const app = express()
 
 DB().then(() => {
@@ -12,5 +13,5 @@ DB().then(() => {
     origin: process.env.ORIGIN,
     credentials: true
   }))
-
+  app.use("/api", createUser)
 })

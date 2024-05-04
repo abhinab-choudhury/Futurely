@@ -1,10 +1,27 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Navbar from '../components/Navbar'
 
 function DailyHoroscopes() {
-
-  let submitHandler = (event) => {
+  let [email, setEmail] = useState("")
+  
+  let submitHandler = async (event) => {
+    setEmail("")
     event.preventDefault()
+    const options = {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: { email }
+    }
+    try {
+      const response = await fetch("http://localhost:8080/api/create_user", options)
+      if (!response.status === 200) {
+        console.log(`Error Sending data: ${response.message}`)
+      }
+    } catch (error) {
+      console.log(`Error : ${error}`)
+    }
   }
 
   return (
@@ -30,7 +47,7 @@ function DailyHoroscopes() {
                       <path d="M11.241 9.817c-.36.275-.801.425-1.255.427-.428 0-.845-.138-1.187-.395L0 2.6V14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2.5l-8.759 7.317Z" />
                     </svg>
                   </div>
-                  <input type="text" id="email-address-icon" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block desktop:w-[20vw] mobile:w-[70vw] ps-10 p-2.5" placeholder="name@gmail.com" />
+                  <input onChange={(event) => { setEmail(event.target.value) }} type="text" id="email-address-icon" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block desktop:w-[20vw] mobile:w-[70vw] ps-10 p-2.5" placeholder="name@gmail.com" />
                 </div>
                 <button onClick={submitHandler} type="submit" class="my-2 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Subscribe</button>
               </form>

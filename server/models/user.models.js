@@ -9,11 +9,18 @@ const UserSchema = mongooose.Schema({
     trim: true,
     index: true
   },
+  sunsign: {
+    type: String,
+    lowercase: true,
+    required: true,
+    enum: ['aries', 'taurus', 'gemini', 'cancer', 'leo', 'virgo', 'scorpio', 'libra', 'sagittarius', 'capricorn', 'aquarius', 'pisces'],
+    trim: true
+  },
   role: {
     type: String,
     enum: ['admin', 'user'],
     default: "user"
   }
-}, { timestamp: true })
+}, { timestamps: true })
 
-export default User = mongooose.model("User", UserSchema)
+export const User = mongooose.model("User", UserSchema)
