@@ -13,5 +13,5 @@ DB().then(() => {
     origin: process.env.ORIGIN,
     credentials: true
   }))
-  app.use("/api", createUser)
+  app.use("/api/create_user", createUser)
 })
