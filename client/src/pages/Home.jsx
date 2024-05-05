@@ -29,6 +29,9 @@ function Home() {
           </div>
           <div className='mobile:flex-col mobile:h-fit flex ml-auto mb-auto mt-auto mr-auto rounded-lg border-none w-[80%]'>
             <div className='laptop:p-10 mobile:text-sm laptop:text-xl mobile:flex-col mobile:rounded-md mobile:border-2 border-black shadow font-["Inter"] mobile:p-2 mobile:my-3'>
+              <div className='my-2 mr-2'>
+                <span className='font-extrabold'>Future of Marriage: </span>
+                Curious about your marriage's future? Whether arranged or in love, trust and respect are key. Let's discover your happiness equation together, no matter how you began              </div>
               <div className='my-2'>
                 <span className='font-extrabold mr-2'>Daily Fortune:</span>
                 Discover what the stars have aligned for you today. Will it be a day of triumphs or a time for introspection? Our daily fortune readings will provide you with a personalized message to guide your decisions and elevate your mood.
