@@ -3,21 +3,23 @@ import Navbar from '../components/Navbar'
 
 function DailyHoroscopes() {
   let [email, setEmail] = useState("")
+  let [sunsign, setSunsign] = useState("")
 
   let submitHandler = async (event) => {
     setEmail("")
+    setSunsign("")
     event.preventDefault()
     const options = {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
       },
-      body: { email }
+      body: { email, sunsign }
     }
     try {
-      const response = await fetch("http://localhost:8080/api/create_user", options)
-      if (!response.status === 200) {
-        console.log(`Error Sending data: ${response.message}`)
+      const response = await fetch("https://futurely-hfe3.vercel.app/api/create_user", options)
+      if (response.status === 200) {
+        console.log(`Message: ${response.message}`)
       }
     } catch (error) {
       console.log(`Error : ${error}`)
@@ -53,7 +55,7 @@ function DailyHoroscopes() {
                 </div>
                 <div>
                   <label htmlFor="sunsign" className="block my-2 mb-2 text-sm font-medium text-blue-900">Choose your Sunsign:</label>
-                  <select id="sunsign" className="bg-gray-50 border border-gray-300 text-gray-900 mb-6 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+                  <select onChange={(event) => { setSunsign(event.target.value) }} id="sunsign" className="bg-gray-50 border border-gray-300 text-gray-900 mb-6 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
                     <option defaultValue value="Aries">Aries</option>
                     <option value="taurus">Taurus</option>
                     <option value="gemini">Gemini</option>
