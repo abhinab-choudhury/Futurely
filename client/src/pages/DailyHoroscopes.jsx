@@ -34,7 +34,7 @@ function DailyHoroscopes() {
               Feeling Stuck? Your Gemini Horoscope Has the Answer
             </p>
             <Form onSubmit={submitHandler} className="items-center justify-center space-y-4 mobile:flex mobile:space-y-0 mobile:space-x-4 rtl:space-x-reverse">
-              <fieldset className="w-[50%] p-4">
+              <fieldset className="w-[60%]p-4">
                 <Select
                   value={sunsign}
                   onChange={(event) => setSunsign(event.target.value)}
@@ -55,8 +55,8 @@ function DailyHoroscopes() {
                   <option value="aquarius">Aquarius</option>
                   <option value="pisces">Pisces</option>
                 </Select>
-                <Button type="submit" className="my-2 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                  {loading ? <BtnSpinner /> : 'submit'}
+                <Button type="submit" className="my-2 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-lg px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                  {loading ? "Loading..." : 'Submit'}
                 </Button>
                 <Markdown id="responce" className="tex-green-500 text-left">{apiResponce}</Markdown>
               </fieldset>
