@@ -178,5 +178,6 @@ export async function runChat(sunsign) {
 
   const result = await chat.sendMessage(`Todays Horoscope for ${sunsign}.`);
   const response = result.response;
+  console.log(response)
   return response.text();
 }
