@@ -7,12 +7,12 @@ function Footer() {
       <div className='flex justify-between w-full p-10'>
         <div className='flex laptop:flex-col tablet:flex-col mobile:block'>
           Developed by:
-          <div className='flex laptop:flex-row tablet:flex-row mobile:block my-2'>
-            <a href='https://www.instagram.com/abhinab_choudhury_/' className='flex hover:underline'>
+          <div className='flex laptop:flex-row tablet:flex-row mobile:block my-2 mobile:text-[0.7rem] tablet:text-sm'>
+            <a href='https://www.instagram.com/abhinab_choudhury_/' className='flex items-center hover:underline'>
               <img className='w-[30px] h-[30px]' src={Instagram} alt={"Instagram.png"} />
               Abhinab Choudhury
             </a>
-            <a href='https://www.instagram.com/arkaaa.18/' className='flex hover:underline'>
+            <a href='https://www.instagram.com/arkaaa.18/' className='flex items-center hover:underline'>
               <img className='w-[30px] h-[30px]' src={Instagram} alt={"Instagram.png"} />
               Arkadeep Karmakar
             </a>
