@@ -47,7 +47,7 @@ function MarriageCallPage() {
         <Navbar />
       </section>
       <section>
-        <div className='my-20 border-4 rounded-[30px] p-10 mobile:w-[90vw] laptop:w-[40vw] flex flex-col ml-auto mr-auto font-["Inter"]'>
+        <div className='my-28 border-4 rounded-[30px] p-10 mobile:w-[90vw] laptop:w-[40vw] flex flex-col ml-auto mr-auto font-["Inter"]'>
 
           <div className='laptop:flex laptop:gap-10 tablet:gap-10'>
             <h1 className='text-3xl font-extrabold'>Marriage Call</h1>

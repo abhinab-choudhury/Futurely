@@ -1,6 +1,8 @@
 
 # Improvements:
+ - [ ] Adding Google Search Console (<https://search.google.com/search-console>)
  - [ ] Improve the Landing Page i,e  on scrolling a certain angle we the page content will change accordingly with 3D Animation
+ - [ ] Improve Font Styling that fits the Mobile User and Desktop User. 
  - [ ]  Make a Good Video for Linkedin
  - [ ]  Make a Real for Instagram 
  - [ ] A Blog Video in Youtube.
