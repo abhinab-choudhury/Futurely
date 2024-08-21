@@ -6,18 +6,18 @@ import { runChat } from '../utils/AIDailyHoroscope';
 
 function DailyHoroscopes() {
   const [sunsign, setSunsign] = useState('');
-  const [apiResponce, setApiResponce] = useState("");
+  const [apiResponce, setApiResponce] = useState('');
   const [loading, setLoading] = useState(false);
 
   const submitHandler = async (event) => {
     event.preventDefault();
     try {
-      setLoading(true)
-      setApiResponce(await runChat(sunsign))
+      setLoading(true);
+      setApiResponce(await runChat(sunsign));
     } catch (error) {
-      console.log(error)
+      console.log(error);
     } finally {
-      setLoading(false)
+      setLoading(false);
     }
   };
 
@@ -29,11 +29,16 @@ function DailyHoroscopes() {
         </section>
         <section className="flex flex-col min-h-screen relative top-36 mobile:w-[90vw] laptop:w-[50vw] mx-auto">
           <div className="w-full p-4 text-center bg-gradient-to-r from-cyan-100 to-blue-300 border border-blue-300 rounded-lg shadow mobile:p-8">
-            <h5 className="mb-2 mobile:text-2xl  text-3xl font-bold text-gray-90">Get more Daily Horoscope</h5>
+            <h5 className="mb-2 mobile:text-2xl  text-3xl font-bold text-gray-90">
+              Get more Daily Horoscope
+            </h5>
             <p className="mb-5 mobile:text-sm text-base text-gray-800">
               Feeling Stuck? Your Gemini Horoscope Has the Answer
             </p>
-            <Form onSubmit={submitHandler} className="items-center justify-center space-y-4 mobile:flex mobile:space-y-0 mobile:space-x-4 rtl:space-x-reverse">
+            <Form
+              onSubmit={submitHandler}
+              className="items-center justify-center space-y-4 mobile:flex mobile:space-y-0 mobile:space-x-4 rtl:space-x-reverse"
+            >
               <fieldset className="w-[60%]p-4">
                 <Select
                   value={sunsign}
@@ -55,10 +60,15 @@ function DailyHoroscopes() {
                   <option value="aquarius">Aquarius</option>
                   <option value="pisces">Pisces</option>
                 </Select>
-                <Button type="submit" className="my-2 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-lg px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                  {loading ? "Loading..." : 'Submit'}
+                <Button
+                  type="submit"
+                  className="my-2 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-lg px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                >
+                  {loading ? 'Loading...' : 'Submit'}
                 </Button>
-                <Markdown id="responce" className="tex-green-500 text-left">{apiResponce}</Markdown>
+                <Markdown id="responce" className="tex-green-500 text-left">
+                  {apiResponce}
+                </Markdown>
               </fieldset>
             </Form>
           </div>
@@ -85,14 +95,19 @@ const Select = ({ value, onChange, label, children, required }) => (
 );
 
 const Button = ({ type, children, loading }) => (
-  <button type={type} className="my-2 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+  <button
+    type={type}
+    className="my-2 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+  >
     {loading ? 'Loading...' : children}
   </button>
-
 );
 
 const Form = ({ onSubmit, children }) => (
-  <form onSubmit={onSubmit} className="items-center justify-center space-y-4 mobile:flex mobile:space-y-0 mobile:space-x-4 rtl:space-x-reverse">
+  <form
+    onSubmit={onSubmit}
+    className="items-center justify-center space-y-4 mobile:flex mobile:space-y-0 mobile:space-x-4 rtl:space-x-reverse"
+  >
     {children}
   </form>
 );

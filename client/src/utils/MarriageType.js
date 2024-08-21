@@ -1,8 +1,12 @@
-import moment from 'moment'
+import moment from 'moment';
 
 function MarriageType() {
-  const name = document.querySelector(".name").value
-  let dob = moment(document.querySelector(".dob").value).format("DD-MM-YYYY").replace(/\//g, '-').split('-').join("")
+  const name = document.querySelector('.name').value;
+  let dob = moment(document.querySelector('.dob').value)
+    .format('DD-MM-YYYY')
+    .replace(/\//g, '-')
+    .split('-')
+    .join('');
 
   let sum = 0;
   let sum2 = 0;
@@ -10,7 +14,7 @@ function MarriageType() {
   let count = 0;
 
   // Extracting day from the date of birth
-  console.log(dob)
+  console.log(dob);
   let str = dob.substring(0, 2);
   let mulyank = parseInt(str, 10);
 
@@ -34,7 +38,7 @@ function MarriageType() {
   }
 
   // Checking 2, 4, 6, 1
-  let allSumStr = sum + "" + sum3 + "" + dob_wrt;
+  let allSumStr = sum + '' + sum3 + '' + dob_wrt;
   let allSumInt = parseInt(allSumStr);
   let numOfDigits = allSumStr.length;
   let digits = new Array(numOfDigits);
@@ -61,4 +65,4 @@ function MarriageType() {
   }
 }
 
-export default MarriageType
+export default MarriageType;

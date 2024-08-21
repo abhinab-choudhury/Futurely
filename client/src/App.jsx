@@ -1,18 +1,13 @@
-
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
-import Features from './pages/Features'
+import Features from './pages/Features';
 import ErrorPage from './pages/ErrorPage';
 import MarriageCallPage from './pages/MarriageCallPage';
 import Horoscope from './pages/HoroscopePage';
 import SunsignHarmonyPage from './pages/SunsignHarmonyPage';
 import DailyHoroscopes from './pages/DailyHoroscopes';
 
-import { SpeedInsights } from '@vercel/speed-insights/react';
-
-
 function App() {
-
   return (
     <>
       <BrowserRouter>
@@ -23,10 +18,9 @@ function App() {
           <Route exact path="/features/horoscope" element={<Horoscope />} />
           <Route exact path="/features/sunshinharmony" element={<SunsignHarmonyPage />} />
           <Route exact path="/features/dailyhoroscopes" element={<DailyHoroscopes />} />
-          <Route path='*' element={<ErrorPage />} />
+          <Route path="*" element={<ErrorPage />} />
         </Routes>
       </BrowserRouter>
-      <SpeedInsights />
     </>
   );
 }

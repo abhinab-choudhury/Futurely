@@ -15,7 +15,6 @@
   },
   "dependencies": {
     "@google/generative-ai": "^0.10.0",
-    "@vercel/speed-insights": "^1.0.10",
     "dotenv": "^16.4.5",
     "markdown-to-jsx": "^7.4.7",
     "moment": "^2.30.1",
