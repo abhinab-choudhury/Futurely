@@ -62,7 +62,6 @@ To set up Futurely locally, follow these steps:
 ## Technologies Used
 
 - **Frontend:** React.js, Tailwind CSS
-- **Backend:** Node.js, Express, MongoDB
 - **Deployment:** Vercel
 - **APIs:** Quote-APIs from Rapid API & Gemini APIs to provide horoscope predictions
 
