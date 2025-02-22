@@ -1,8 +1,4 @@
-<div style="background-color:white; width:100%; padding:20px 0px; display:flex; align-items:center; margin-bottom:10px;">
-    <img src="./client/src/assets/Image.png" width="65" height="56" alt="Futurely Logo" style="max-heigh:30%; height:auto; padding:0px 8px;"/>
-    <img src="./client/public/Futurely.svg" alt="Futurely Logo" style="max-width:100%; height:auto;" />
-    <hr />
-</div>
+# Futurely
 
 **Futurely** is an innovative website that helps users predict their future and provides detailed horoscopes based on their respective sun signs. With features like partner match checks, yearly horoscopes, and sun sign compatibility, Futurely offers insights into what lies ahead, empowering users to make informed decisions in their personal and romantic lives.
  
